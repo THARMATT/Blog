@@ -1,11 +1,11 @@
 import React from 'react'
 import appwriteService from '../appwrite/conf'
 import { Link } from 'react-router-dom'
-function postCard({$id ,title, featuredImage}) {
+function PostCard({$id ,title, featuredImage}) {
   return (
    <Link to={`/post/${$id}`}>
 
-    <div className="w-full ronded-xl p-4">
+    <div className="w-full ronded-xl p-4 bg-gray-100">
         <div className="w-full justify-center mb-4">
             <img src={appwriteService.getFilePreview(featuredImage)} alt="" className='rounded-xl' />
 
@@ -16,4 +16,4 @@ function postCard({$id ,title, featuredImage}) {
   )
 }
 
-export default postCard
+export default PostCard
